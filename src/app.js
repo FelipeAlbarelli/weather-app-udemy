@@ -32,14 +32,16 @@ app.get('' , (req , res) => {
 
 app.get('/about' , (req , res) => {
     res.render('about' , {
-        title : 'About'
+        title : 'About',
+        name : 'Felipe Albarelli'
     })
 })
 
 app.get('/help' , (req , res) => {
     res.render('help' , {
         helpMsg : 'this is some help msg',
-        title : 'Help'
+        title : 'Help',
+        name : 'Felipe Albarelli'
     })
 })
 
@@ -71,7 +73,8 @@ app.get('/weather' , (req, res) => {
 app.get('/help/*' , (req , res) => {
     res.render('notFound', {
         notFoundMsg : 'no help page found',
-        title : "Help"
+        title : "Help",
+        name : 'Felipe Albarelli'
     })
 })
 
@@ -91,7 +94,8 @@ app.get('/pro' , (req, res) => {
 app.get('*' , (req , res) => {
     res.render('notFound', {
         notFoundMsg : 'no page found',
-        title : '404'
+        title : '404',
+        name : 'Felipe Albarelli'
     })
 })
 
