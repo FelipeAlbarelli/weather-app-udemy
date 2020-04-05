@@ -7,10 +7,10 @@ const forecast = require('./utils/forecast');
 
 const log = console.log;
 
-const app = express();
+const app = express(); 
 
 // setup heroku port number, otherwise use 3000 for local use
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 2000;
 
 // def paths to express config
 const publicDir = path.join(__dirname , '../public');
