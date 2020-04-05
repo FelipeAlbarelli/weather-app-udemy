@@ -9,6 +9,8 @@ const log = console.log;
 
 const app = express();
 
+// setup heroku port number, otherwise use 3000 for local use
+const port = process.env.PORT || 3000;
 
 // def paths to express config
 const publicDir = path.join(__dirname , '../public');
@@ -100,8 +102,8 @@ app.get('*' , (req , res) => {
 })
 
 
-app.listen(3000 , () => {
+app.listen(port , () => {
     log('-----------------------------------------------')
-    log(ch.magenta('    server running on port') , ch.blue(3000) )
+    log(ch.magenta(`    server is up on port ${port}`) , ch.blue(3000) )
 })
 
