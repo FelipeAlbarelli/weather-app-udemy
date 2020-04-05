@@ -104,6 +104,6 @@ app.get('*' , (req , res) => {
 
 app.listen(port , () => {
     log('-----------------------------------------------')
-    log(ch.magenta(`    server is up on port ${port}`) , ch.blue(3000) )
+    log(ch.magenta(`    server is up on port`) , ch.blue(port) )
 })
 
